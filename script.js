@@ -3,9 +3,9 @@ const chapterData = {
     place: 'Paris, France',
     date: 'Dates to confirm',
     marker: 'P',
-    title: 'An international education in the city that shaped me.',
-    copy: 'I studied at the American School of Paris, École Jeannine Manuel Paris, and The American University of Paris. French roots and international classrooms taught me to listen closely, adapt quickly, and work across different perspectives.',
-    tags: ['International perspective', 'Adaptability', 'Curiosity']
+    title: 'Education and research in the city that shaped me.',
+    copy: 'I studied at The American University of Paris and worked in Life Sciences Research – Molecular Biology & Immunology at Institut Pasteur (Paris). These experiences taught me to listen closely, work with scientific discipline, and move comfortably across different perspectives.',
+    tags: ['The American University of Paris', 'Molecular Biology', 'Immunology']
   },
   sourcea: {
     place: 'Paris, France',
@@ -27,8 +27,8 @@ const chapterData = {
     place: 'United States',
     date: 'Current chapter',
     marker: 'N',
-    title: 'Preparing projects, evaluating opportunities, and connecting people.',
-    copy: 'My current work centers on early project preparation, opportunity evaluation, and thoughtful talent coordination—helping experienced people reach the conversations where their judgment can create value.',
+    title: 'Supporting Nova Group through preparation, evaluation, and trusted connections.',
+    copy: 'At Nova Group, my current work centers on early project preparation, opportunity evaluation, and thoughtful talent coordination—helping experienced people reach the conversations where their judgment can create value.',
     tags: ['Project preparation', 'Opportunity evaluation', 'Talent coordination']
   }
 };
