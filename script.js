@@ -113,9 +113,6 @@ function closeDialog() {
   document.body.classList.remove('modal-open');
 }
 document.querySelector('.dialog-close').addEventListener('click', closeDialog);
-dialog.addEventListener('click', (event) => {
-  if (event.target === dialog) closeDialog();
-});
 document.addEventListener('keydown', (event) => {
   if (event.key === 'Escape' && !dialog.hidden) closeDialog();
 });
