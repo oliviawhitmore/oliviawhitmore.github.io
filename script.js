@@ -103,10 +103,19 @@ const dialogImage = document.getElementById('dialog-image');
 document.querySelectorAll('[data-photo]').forEach((button) => {
   button.addEventListener('click', () => {
     dialogImage.src = button.dataset.photo;
-    dialog.showModal();
+    dialog.hidden = false;
+    document.body.classList.add('modal-open');
   });
 });
-document.querySelector('.dialog-close').addEventListener('click', () => dialog.close());
+function closeDialog() {
+  dialog.hidden = true;
+  dialogImage.removeAttribute('src');
+  document.body.classList.remove('modal-open');
+}
+document.querySelector('.dialog-close').addEventListener('click', closeDialog);
 dialog.addEventListener('click', (event) => {
-  if (event.target === dialog) dialog.close();
+  if (event.target === dialog) closeDialog();
+});
+document.addEventListener('keydown', (event) => {
+  if (event.key === 'Escape' && !dialog.hidden) closeDialog();
 });

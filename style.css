@@ -177,10 +177,11 @@ h1 em { color: var(--blue); font-weight: 400; }
 footer { border-top: 1px solid var(--ink); }
 .footer-inner { min-height: 6rem; display: flex; align-items: center; justify-content: space-between; gap: 1.5rem; color: var(--muted); font-size: .72rem; font-weight: 740; letter-spacing: .1em; text-transform: uppercase; }
 
-.photo-dialog { width: min(92vw, 900px); max-height: 92vh; padding: 0; border: 0; background: transparent; }
-.photo-dialog::backdrop { background: rgba(15,20,25,.88); }
-.photo-dialog img { width: 100%; max-height: 86vh; object-fit: contain; }
-.dialog-close { position: fixed; top: 1rem; right: 1rem; z-index: 2; padding: .65rem .9rem; border: 1px solid rgba(255,255,255,.4); color: #fff; cursor: pointer; background: rgba(15,20,25,.65); }
+.photo-dialog { position: fixed; inset: 0; z-index: 100; display: grid; place-items: center; padding: 3rem 1rem 1rem; background: rgba(15,20,25,.9); }
+.photo-dialog[hidden] { display: none; }
+.photo-dialog img { width: min(92vw, 900px); max-height: 86vh; object-fit: contain; }
+.dialog-close { position: absolute; top: 1rem; right: 1rem; z-index: 2; padding: .65rem .9rem; border: 1px solid rgba(255,255,255,.4); color: #fff; cursor: pointer; background: rgba(15,20,25,.65); }
+body.modal-open { overflow: hidden; }
 
 .reveal { opacity: 0; transform: translateY(24px); transition: opacity .8s ease, transform .8s cubic-bezier(.2,.8,.2,1); }
 .reveal.in-view { opacity: 1; transform: none; }
