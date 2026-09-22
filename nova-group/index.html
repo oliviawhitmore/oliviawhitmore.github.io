@@ -1,0 +1,561 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="theme-color" content="#070b10">
+  <meta name="description" content="Nova Group is an advanced technology industrialization platform in formation in Raleigh, North Carolina, focused on evaluation, development, manufacturing readiness, and commercialization.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Nova Group | Advanced Technology Industrialization">
+  <meta property="og:description" content="An advanced technology platform in formation, connecting technical promise with disciplined industrial execution.">
+  <meta property="og:url" content="https://oliviawhitmore.github.io/nova-group/">
+  <link rel="canonical" href="https://oliviawhitmore.github.io/nova-group/">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23070b10'/%3E%3Cpath d='M17 45V19l30 26V19' fill='none' stroke='%23d39b61' stroke-width='5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+  <title>Nova Group | Advanced Technology Industrialization</title>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Nova Group (Working Name)",
+    "url": "https://oliviawhitmore.github.io/nova-group/",
+    "description": "Advanced technology industrialization platform in formation in Raleigh, North Carolina."
+  }
+  </script>
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg: #070b10;
+      --bg-2: #0a1017;
+      --panel: rgba(15, 23, 31, .82);
+      --panel-solid: #0e161e;
+      --line: rgba(226, 234, 239, .13);
+      --line-strong: rgba(226, 234, 239, .25);
+      --text: #f2f4f5;
+      --muted: #9aa7b0;
+      --quiet: #6c7a84;
+      --copper: #d39b61;
+      --copper-soft: rgba(211, 155, 97, .14);
+      --steel: #86adba;
+      --steel-soft: rgba(134, 173, 186, .12);
+      --radius: 1.4rem;
+      --max: 1240px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; background: var(--bg); }
+    body {
+      margin: 0;
+      min-width: 320px;
+      overflow-x: hidden;
+      color: var(--text);
+      background:
+        radial-gradient(circle at 16% -8%, rgba(89, 127, 142, .19), transparent 32rem),
+        radial-gradient(circle at 96% 18%, rgba(167, 105, 50, .12), transparent 30rem),
+        linear-gradient(180deg, #070b10 0%, #091018 52%, #070b10 100%);
+      font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-size: 16px;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      opacity: .025;
+      z-index: 9;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120' viewBox='0 0 120 120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.7'/%3E%3C/svg%3E");
+    }
+    a { color: inherit; text-decoration: none; }
+    button, input, textarea { font: inherit; }
+    button { color: inherit; }
+    ::selection { background: var(--copper); color: var(--bg); }
+    :focus-visible { outline: 2px solid var(--copper); outline-offset: 4px; }
+
+    .skip-link {
+      position: fixed;
+      top: .75rem;
+      left: .75rem;
+      z-index: 100;
+      transform: translateY(-180%);
+      padding: .75rem 1rem;
+      border-radius: .6rem;
+      color: var(--bg);
+      background: var(--text);
+      transition: transform .2s ease;
+    }
+    .skip-link:focus { transform: translateY(0); }
+    .shell { width: min(calc(100% - 2rem), var(--max)); margin-inline: auto; }
+    .eyebrow {
+      margin: 0;
+      color: var(--copper);
+      font-size: .76rem;
+      font-weight: 750;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+    }
+    .serif { font-family: Georgia, "Times New Roman", serif; }
+    .muted { color: var(--muted); }
+
+    .site-header {
+      position: fixed;
+      inset: 0 0 auto;
+      z-index: 20;
+      border-bottom: 1px solid rgba(255,255,255,.08);
+      background: rgba(7, 11, 16, .76);
+      -webkit-backdrop-filter: blur(18px);
+      backdrop-filter: blur(18px);
+    }
+    .nav {
+      min-height: 4.7rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1.5rem;
+    }
+    .brand { display: inline-flex; align-items: center; gap: .8rem; min-width: max-content; }
+    .brand-mark {
+      width: 2.2rem;
+      height: 2.2rem;
+      display: grid;
+      place-items: center;
+      border: 1px solid var(--line-strong);
+      border-radius: .65rem;
+      color: var(--copper);
+      background: linear-gradient(145deg, rgba(255,255,255,.07), rgba(255,255,255,.015));
+      font-family: Georgia, serif;
+      font-size: 1.1rem;
+    }
+    .brand-name { font-weight: 730; letter-spacing: -.01em; }
+    .working-name { margin-left: .35rem; color: var(--quiet); font-size: .7rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; }
+    .nav-links { display: flex; align-items: center; gap: 1.65rem; }
+    .nav-links a { color: var(--muted); font-size: .88rem; font-weight: 650; transition: color .2s ease; }
+    .nav-links a:hover { color: var(--text); }
+    .nav-cta {
+      padding: .72rem 1rem;
+      border: 1px solid var(--line-strong);
+      border-radius: 999px;
+      color: var(--text) !important;
+      background: rgba(255,255,255,.04);
+    }
+
+    .hero {
+      min-height: 100svh;
+      display: flex;
+      align-items: center;
+      padding: 8.8rem 0 5.5rem;
+    }
+    .hero-grid { display: grid; grid-template-columns: 1.08fr .92fr; gap: clamp(3rem, 7vw, 7rem); align-items: center; }
+    .status-line {
+      display: inline-flex;
+      align-items: center;
+      gap: .65rem;
+      margin-bottom: 1.55rem;
+      color: #b8c3ca;
+      font-size: .8rem;
+      font-weight: 700;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+    }
+    .status-line::before { content: ""; width: .45rem; height: .45rem; border-radius: 50%; background: var(--copper); box-shadow: 0 0 18px rgba(211,155,97,.55); }
+    h1 {
+      max-width: 760px;
+      margin: 0;
+      font-size: clamp(3.35rem, 7.6vw, 7.3rem);
+      font-weight: 610;
+      letter-spacing: -.065em;
+      line-height: .9;
+    }
+    h1 .serif { color: var(--copper); font-weight: 400; font-style: italic; }
+    .hero-copy { max-width: 660px; margin: 1.8rem 0 0; color: #aab5bc; font-size: clamp(1.05rem, 1.45vw, 1.24rem); line-height: 1.75; }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: .85rem; margin-top: 2rem; }
+    .button {
+      min-height: 3.25rem;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: .7rem;
+      padding: .8rem 1.2rem;
+      border: 1px solid var(--line-strong);
+      border-radius: 999px;
+      font-size: .9rem;
+      font-weight: 740;
+      transition: transform .25s ease, border-color .25s ease, background .25s ease;
+    }
+    .button:hover { transform: translateY(-2px); border-color: rgba(211,155,97,.55); }
+    .button-primary { color: #111820; border-color: var(--copper); background: var(--copper); }
+    .button-primary:hover { background: #e1aa72; }
+    .button-secondary { background: rgba(255,255,255,.025); }
+
+    .system-card {
+      position: relative;
+      min-height: 32rem;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: 2rem;
+      background:
+        linear-gradient(rgba(255,255,255,.035) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,.035) 1px, transparent 1px),
+        linear-gradient(145deg, rgba(134,173,186,.09), rgba(13,20,27,.74));
+      background-size: 3rem 3rem, 3rem 3rem, auto;
+      box-shadow: 0 50px 120px rgba(0,0,0,.32);
+    }
+    .system-card::after {
+      content: "";
+      position: absolute;
+      inset: 18%;
+      border: 1px solid rgba(211,155,97,.25);
+      border-radius: 50%;
+      animation: orbit 18s linear infinite;
+    }
+    .system-card::before {
+      content: "";
+      position: absolute;
+      inset: 31%;
+      border: 1px dashed rgba(134,173,186,.25);
+      border-radius: 50%;
+      animation: orbit 12s linear infinite reverse;
+    }
+    @keyframes orbit { to { transform: rotate(360deg); } }
+    .system-label { position: absolute; top: 1.4rem; left: 1.4rem; z-index: 2; font-size: .76rem; color: var(--quiet); letter-spacing: .14em; text-transform: uppercase; }
+    .system-center {
+      position: absolute;
+      inset: 50% auto auto 50%;
+      z-index: 2;
+      width: 9.5rem;
+      height: 9.5rem;
+      display: grid;
+      place-items: center;
+      transform: translate(-50%, -50%);
+      border: 1px solid rgba(211,155,97,.4);
+      border-radius: 50%;
+      background: rgba(7,11,16,.88);
+      box-shadow: 0 0 70px rgba(211,155,97,.11);
+    }
+    .system-center strong { font-family: Georgia, serif; font-size: 2.25rem; font-weight: 400; letter-spacing: .08em; }
+    .node {
+      position: absolute;
+      z-index: 3;
+      padding: .56rem .75rem;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      color: #c2ccd1;
+      background: rgba(7,11,16,.86);
+      font-size: .72rem;
+      font-weight: 720;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+    .node-1 { top: 18%; left: 13%; }
+    .node-2 { top: 20%; right: 11%; }
+    .node-3 { bottom: 19%; left: 10%; }
+    .node-4 { right: 12%; bottom: 17%; }
+    .system-note { position: absolute; right: 1.4rem; bottom: 1.25rem; z-index: 3; color: var(--quiet); font-size: .75rem; }
+
+    .fact-strip { border-block: 1px solid var(--line); background: rgba(255,255,255,.014); }
+    .facts { display: grid; grid-template-columns: repeat(3, 1fr); }
+    .fact { padding: 1.45rem 1.7rem; border-right: 1px solid var(--line); }
+    .fact:last-child { border-right: 0; }
+    .fact dt { color: var(--quiet); font-size: .72rem; font-weight: 740; letter-spacing: .14em; text-transform: uppercase; }
+    .fact dd { margin: .35rem 0 0; color: #dce1e4; font-size: .98rem; font-weight: 650; }
+
+    section { padding: clamp(5.5rem, 10vw, 9rem) 0; }
+    .section-head { display: grid; grid-template-columns: .8fr 1.2fr; gap: 2rem; align-items: end; margin-bottom: 3.4rem; }
+    .section-head h2 { max-width: 780px; margin: 0; font-size: clamp(2.5rem, 5.2vw, 4.7rem); line-height: 1.02; letter-spacing: -.045em; }
+    .section-head p:last-child { max-width: 590px; justify-self: end; margin: 0; color: var(--muted); font-size: 1.06rem; line-height: 1.8; }
+
+    .focus-grid { display: grid; grid-template-columns: repeat(12, 1fr); gap: 1rem; }
+    .focus-card {
+      min-height: 20rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 1.65rem;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: linear-gradient(145deg, rgba(255,255,255,.045), rgba(255,255,255,.012));
+      transition: transform .35s ease, border-color .35s ease, background .35s ease;
+    }
+    .focus-card:hover { transform: translateY(-6px); border-color: rgba(211,155,97,.34); background: linear-gradient(145deg, rgba(211,155,97,.075), rgba(255,255,255,.016)); }
+    .focus-card:nth-child(1), .focus-card:nth-child(4) { grid-column: span 7; }
+    .focus-card:nth-child(2), .focus-card:nth-child(3) { grid-column: span 5; }
+    .card-index { color: var(--quiet); font-size: .76rem; font-weight: 740; letter-spacing: .14em; }
+    .focus-card h3 { margin: 0 0 .8rem; font-family: Georgia, serif; font-size: clamp(1.65rem, 3vw, 2.45rem); font-weight: 400; }
+    .focus-card p { max-width: 520px; margin: 0; color: var(--muted); font-size: .98rem; line-height: 1.72; }
+
+    .pathway { background: rgba(255,255,255,.014); border-block: 1px solid var(--line); }
+    .path-grid { display: grid; grid-template-columns: .82fr 1.18fr; gap: clamp(2rem, 6vw, 6rem); align-items: start; }
+    .path-intro { position: sticky; top: 7rem; }
+    .path-intro h2 { margin: .85rem 0 1.2rem; font-size: clamp(2.5rem, 4.6vw, 4.4rem); line-height: 1.02; letter-spacing: -.045em; }
+    .path-intro > p:last-of-type { max-width: 520px; color: var(--muted); font-size: 1.06rem; line-height: 1.8; }
+    .path-tabs { display: grid; gap: .65rem; }
+    .path-tab {
+      width: 100%;
+      display: grid;
+      grid-template-columns: 3rem 1fr auto;
+      gap: 1rem;
+      align-items: center;
+      padding: 1.15rem 1.2rem;
+      border: 1px solid var(--line);
+      border-radius: 1rem;
+      text-align: left;
+      cursor: pointer;
+      background: rgba(255,255,255,.018);
+      transition: border-color .25s ease, background .25s ease;
+    }
+    .path-tab:hover, .path-tab[aria-selected="true"] { border-color: rgba(211,155,97,.4); background: var(--copper-soft); }
+    .tab-num { color: var(--copper); font-size: .77rem; font-weight: 760; letter-spacing: .1em; }
+    .tab-title { font-size: 1rem; font-weight: 720; }
+    .tab-arrow { color: var(--quiet); }
+    .path-panel { margin-top: 1rem; padding: 1.6rem; border: 1px solid var(--line); border-radius: var(--radius); background: var(--panel-solid); }
+    .path-panel h3 { margin: 0; font-family: Georgia, serif; font-size: 2rem; font-weight: 400; }
+    .path-panel p { margin: .8rem 0 0; color: var(--muted); }
+
+    .principles { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+    .principle { padding: 1.6rem; border-top: 1px solid var(--line-strong); }
+    .principle span { color: var(--steel); font-size: .74rem; font-weight: 740; letter-spacing: .14em; text-transform: uppercase; }
+    .principle h3 { margin: 1.2rem 0 .75rem; font-size: 1.18rem; }
+    .principle p { margin: 0; color: var(--muted); font-size: .96rem; }
+
+    .contact-card {
+      position: relative;
+      overflow: hidden;
+      display: grid;
+      grid-template-columns: 1fr .8fr;
+      gap: clamp(2rem, 7vw, 7rem);
+      padding: clamp(2rem, 6vw, 5rem);
+      border: 1px solid var(--line);
+      border-radius: 2rem;
+      background: linear-gradient(135deg, rgba(134,173,186,.12), rgba(211,155,97,.08) 68%, rgba(255,255,255,.025));
+    }
+    .contact-card::after { content: "N"; position: absolute; right: -1.5rem; bottom: -7rem; color: rgba(255,255,255,.025); font-family: Georgia, serif; font-size: 26rem; line-height: 1; pointer-events: none; }
+    .contact-copy, .contact-details { position: relative; z-index: 2; }
+    .contact-copy h2 { margin: .8rem 0 1.1rem; font-size: clamp(2.55rem, 5vw, 4.8rem); line-height: 1; letter-spacing: -.05em; }
+    .contact-copy p:last-child { max-width: 610px; color: var(--muted); font-size: 1.03rem; }
+    .contact-details { display: grid; align-content: end; gap: .75rem; }
+    .contact-link { display: flex; justify-content: space-between; align-items: center; gap: 1rem; padding: 1rem 0; border-bottom: 1px solid var(--line); }
+    .contact-link small { display: block; margin-bottom: .15rem; color: var(--quiet); font-size: .7rem; font-weight: 740; letter-spacing: .13em; text-transform: uppercase; }
+    .contact-link strong { overflow-wrap: anywhere; font-size: .96rem; }
+    .contact-link span:last-child { color: var(--copper); }
+
+    footer { padding: 2.2rem 0 2.6rem; border-top: 1px solid var(--line); }
+    .footer-grid { display: grid; grid-template-columns: 1fr 1.25fr; gap: 2rem; align-items: start; }
+    .footer-brand { font-weight: 740; }
+    .legal-note { margin: 0; color: var(--quiet); font-size: .8rem; line-height: 1.7; }
+
+    .reveal { opacity: 0; transform: translateY(24px); transition: opacity .8s ease, transform .8s cubic-bezier(.2,.8,.2,1); }
+    .reveal.in-view { opacity: 1; transform: none; }
+
+    @media (max-width: 900px) {
+      .nav-links a:not(.nav-cta) { display: none; }
+      .hero-grid, .section-head, .path-grid, .contact-card, .footer-grid { grid-template-columns: 1fr; }
+      .hero { min-height: auto; }
+      .system-card { min-height: 28rem; }
+      .section-head p:last-child { justify-self: start; }
+      .facts { grid-template-columns: 1fr; }
+      .fact { border-right: 0; border-bottom: 1px solid var(--line); }
+      .fact:last-child { border-bottom: 0; }
+      .focus-card:nth-child(n) { grid-column: span 6; }
+      .path-intro { position: static; }
+      .principles { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 640px) {
+      .shell { width: min(calc(100% - 1.2rem), var(--max)); }
+      .site-header { position: absolute; }
+      .working-name { display: none; }
+      .nav-cta { padding-inline: .85rem; }
+      .hero { padding-top: 7.1rem; }
+      h1 { font-size: clamp(3rem, 16vw, 4.8rem); }
+      .hero-actions { align-items: stretch; }
+      .button { width: 100%; }
+      .system-card { min-height: 24rem; border-radius: 1.35rem; }
+      .system-center { width: 7.4rem; height: 7.4rem; }
+      .system-center strong { font-size: 1.7rem; }
+      .node { font-size: .61rem; }
+      .node-1 { left: 6%; }
+      .node-2 { right: 5%; }
+      .node-3 { left: 5%; }
+      .node-4 { right: 5%; }
+      .focus-grid { display: grid; grid-template-columns: 1fr; }
+      .focus-card:nth-child(n) { grid-column: 1; min-height: 17rem; }
+      .path-tab { grid-template-columns: 2.4rem 1fr auto; padding-inline: .95rem; }
+      .contact-card { border-radius: 1.35rem; }
+      .contact-card::after { font-size: 17rem; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
+      .reveal { opacity: 1; transform: none; }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <nav class="nav shell" aria-label="Primary navigation">
+      <a class="brand" href="#top" aria-label="Nova Group home">
+        <span class="brand-mark" aria-hidden="true">N</span>
+        <span class="brand-name">Nova Group <span class="working-name">Working name</span></span>
+      </a>
+      <div class="nav-links">
+        <a href="#platform">Platform</a>
+        <a href="#focus">Focus</a>
+        <a href="#approach">Approach</a>
+        <a class="nav-cta" href="#contact">Start a conversation</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="top">
+      <div class="hero-grid shell">
+        <div class="reveal">
+          <div class="status-line">Company in formation · Raleigh, North Carolina</div>
+          <h1>From technical promise to <span class="serif">industrial scale.</span></h1>
+          <p class="hero-copy">Nova Group is being formed as an advanced technology industrialization platform—bringing technical evaluation, development planning, manufacturing readiness, and commercialization into one disciplined pathway.</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#platform">Explore the platform <span aria-hidden="true">↘</span></a>
+            <a class="button button-secondary" href="mailto:oliviawhitmore2026@outlook.com">Contact Nova Group <span aria-hidden="true">↗</span></a>
+          </div>
+        </div>
+
+        <div class="system-card reveal" aria-label="Nova Group operating pathway illustration">
+          <span class="system-label">Integrated pathway / 01</span>
+          <div class="system-center"><strong>NOVA</strong></div>
+          <span class="node node-1">Evaluate</span>
+          <span class="node node-2">Develop</span>
+          <span class="node node-3">Industrialize</span>
+          <span class="node node-4">Commercialize</span>
+          <span class="system-note">Built around disciplined execution</span>
+        </div>
+      </div>
+    </section>
+
+    <div class="fact-strip" id="platform">
+      <dl class="facts shell">
+        <div class="fact"><dt>Status</dt><dd>Organizational formation and platform development</dd></div>
+        <div class="fact"><dt>Base</dt><dd>Raleigh, North Carolina · United States</dd></div>
+        <div class="fact"><dt>Orientation</dt><dd>Long-term value through industrial execution</dd></div>
+      </dl>
+    </div>
+
+    <section id="focus">
+      <div class="shell">
+        <div class="section-head reveal">
+          <div><p class="eyebrow">Platform focus</p><h2>Where capability meets consequence.</h2></div>
+          <p>We are shaping a platform for technologies that require more than invention. The work begins with clear evaluation and continues through the operating decisions needed to reach real markets.</p>
+        </div>
+        <div class="focus-grid">
+          <article class="focus-card reveal"><span class="card-index">01 / Advanced manufacturing</span><div><h3>Manufacturing systems</h3><p>Translating technical requirements into practical production pathways, operating models, and scalable manufacturing readiness.</p></div></article>
+          <article class="focus-card reveal"><span class="card-index">02 / AI</span><div><h3>Applied intelligence</h3><p>Evaluating AI where it can improve industrial decisions, operating visibility, and the quality of execution.</p></div></article>
+          <article class="focus-card reveal"><span class="card-index">03 / Automation</span><div><h3>Industrial automation</h3><p>Connecting controls, robotics, process design, and workforce realities to build resilient operating systems.</p></div></article>
+          <article class="focus-card reveal"><span class="card-index">04 / Technology domains</span><div><h3>Energy and selected medical technologies</h3><p>Assessing opportunities where technical depth, regulatory awareness, manufacturing discipline, and responsible commercialization must move together.</p></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="pathway" id="approach">
+      <div class="path-grid shell">
+        <div class="path-intro reveal">
+          <p class="eyebrow">Operating approach</p>
+          <h2>A clearer path from decision to delivery.</h2>
+          <p>The platform is designed around a simple principle: important technologies need the right sequence of decisions, people, and operating discipline—not more noise.</p>
+        </div>
+        <div class="reveal">
+          <div class="path-tabs" role="tablist" aria-label="Nova Group operating stages">
+            <button class="path-tab" id="tab-assess" role="tab" aria-selected="true" aria-controls="path-panel" data-title="Assess the opportunity" data-copy="Examine technical credibility, market relevance, execution risk, and the conditions required for a responsible next step."><span class="tab-num">01</span><span class="tab-title">Assess the opportunity</span><span class="tab-arrow">↘</span></button>
+            <button class="path-tab" id="tab-design" role="tab" aria-selected="false" aria-controls="path-panel" data-title="Design the pathway" data-copy="Define the development, regulatory, operating, talent, and commercial decisions that must align before capital and teams are committed."><span class="tab-num">02</span><span class="tab-title">Design the pathway</span><span class="tab-arrow">↘</span></button>
+            <button class="path-tab" id="tab-build" role="tab" aria-selected="false" aria-controls="path-panel" data-title="Prepare to industrialize" data-copy="Bring technical and operating leaders together around manufacturing readiness, partner selection, quality systems, and measurable milestones."><span class="tab-num">03</span><span class="tab-title">Prepare to industrialize</span><span class="tab-arrow">↘</span></button>
+            <button class="path-tab" id="tab-scale" role="tab" aria-selected="false" aria-controls="path-panel" data-title="Build for durable scale" data-copy="Create the structures, leadership depth, and commercial discipline needed to grow without losing the integrity of the original technology."><span class="tab-num">04</span><span class="tab-title">Build for durable scale</span><span class="tab-arrow">↘</span></button>
+          </div>
+          <div class="path-panel" id="path-panel" role="tabpanel" aria-live="polite" aria-labelledby="tab-assess">
+            <h3>Assess the opportunity</h3>
+            <p>Examine technical credibility, market relevance, execution risk, and the conditions required for a responsible next step.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="shell">
+        <div class="section-head reveal">
+          <div><p class="eyebrow">How we are building</p><h2>Principles before scale.</h2></div>
+          <p>Nova Group is still in formation. That makes clarity especially important: what is known, what is being developed, and what must wait until it can be verified.</p>
+        </div>
+        <div class="principles">
+          <article class="principle reveal"><span>01 / Evidence</span><h3>Substance over presentation</h3><p>Technical and commercial claims should be tested before they become public commitments.</p></article>
+          <article class="principle reveal"><span>02 / People</span><h3>Capability before title</h3><p>We are beginning conversations with experienced leaders who can support long-term organizational growth.</p></article>
+          <article class="principle reveal"><span>03 / Execution</span><h3>Sequence before speed</h3><p>Good industrial decisions are made in the right order, with ownership and risk visible from the start.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="contact-card shell reveal">
+        <div class="contact-copy">
+          <p class="eyebrow">Connect</p>
+          <h2>Start with a serious conversation.</h2>
+          <p>We welcome thoughtful introductions from technical operators, industrial leaders, and partners whose experience can help shape responsible pathways to scale.</p>
+        </div>
+        <div class="contact-details">
+          <a class="contact-link" href="mailto:oliviawhitmore2026@outlook.com"><span><small>Email</small><strong>oliviawhitmore2026@outlook.com</strong></span><span aria-hidden="true">↗</span></a>
+          <a class="contact-link" href="tel:+13606468458"><span><small>Mobile</small><strong>+1 (360) 646-8458</strong></span><span aria-hidden="true">↗</span></a>
+          <div class="contact-link"><span><small>Location</small><strong>Raleigh, North Carolina</strong></span><span aria-hidden="true">•</span></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-grid shell">
+      <div class="footer-brand">Nova Group <span class="working-name">Working name</span></div>
+      <p class="legal-note">Nova Group is a working name for a company currently in formation. The final legal entity name, registration number, registered address, principal business address, and verifiable incorporation records will be published after the formation process is complete. This website does not constitute an offer of securities or a binding offer of employment.</p>
+    </div>
+  </footer>
+
+  <script>
+    const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const revealItems = document.querySelectorAll('.reveal');
+    if (reducedMotion || !('IntersectionObserver' in window)) {
+      revealItems.forEach((item) => item.classList.add('in-view'));
+    } else {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('in-view');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.12 });
+      revealItems.forEach((item) => observer.observe(item));
+    }
+
+    const tabs = [...document.querySelectorAll('[role="tab"]')];
+    const panel = document.getElementById('path-panel');
+    tabs.forEach((tab, index) => {
+      tab.addEventListener('click', () => activateTab(tab));
+      tab.addEventListener('keydown', (event) => {
+        if (!['ArrowDown', 'ArrowUp', 'Home', 'End'].includes(event.key)) return;
+        event.preventDefault();
+        let next = index;
+        if (event.key === 'ArrowDown') next = (index + 1) % tabs.length;
+        if (event.key === 'ArrowUp') next = (index - 1 + tabs.length) % tabs.length;
+        if (event.key === 'Home') next = 0;
+        if (event.key === 'End') next = tabs.length - 1;
+        tabs[next].focus();
+        activateTab(tabs[next]);
+      });
+    });
+
+    function activateTab(active) {
+      tabs.forEach((tab) => tab.setAttribute('aria-selected', String(tab === active)));
+      panel.setAttribute('aria-labelledby', active.id);
+      panel.querySelector('h3').textContent = active.dataset.title;
+      panel.querySelector('p').textContent = active.dataset.copy;
+    }
+  </script>
+</body>
+</html>
